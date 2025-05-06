@@ -1,7 +1,6 @@
 const { OAuth2Client } = require('google-auth-library');
 const express = require('express');
 const app = express();
-const PORT = 3000;
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dotenv = require('dotenv')
@@ -59,7 +58,7 @@ app.post('/verify-token', async (req, res) => {
     res.status(401).json({ error: 'Invalid token' });
   }
 });
-
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/get-passwords`);
 });
