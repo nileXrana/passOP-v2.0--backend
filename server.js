@@ -60,7 +60,7 @@ app.post('/verify-token', async (req, res) => {
 });
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/get-passwords`);
+  console.log(`Server running on port ${PORT}`);
 });
 
 // node --watch server.js
